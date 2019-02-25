@@ -30,8 +30,7 @@ export const AddQuote = saveCallback => {
         throw new Error('Server could not be reached');
       })
       .then(_ => {
-        setName('');
-        setQuote('');
+        window.location.reload();
       })
       .catch(err => {
         console.log(err);

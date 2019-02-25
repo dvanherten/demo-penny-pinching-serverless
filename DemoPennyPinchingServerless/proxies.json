@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/proxies",
+  "proxies": {
+    "Index": {
+      "matchCondition": {
+        "route": "/"
+      },
+      "backendUri": "https://demosiliconhaltonfull.z27.web.core.windows.net/"
+    },
+    "Static Passthrough": {
+      "matchCondition": {
+        "route": "/static/{*restOfPath}"
+      },
+      "backendUri": "https://demosiliconhaltonfull.z27.web.core.windows.net//static/{restOfPath}"
+    }
+  }
+}
