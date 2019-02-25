@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Header } from './Header';
 import PageContent from './PageContent';
-import { AddComment } from './AddComment';
+import { AddQuote } from './AddQuote';
 
 class App extends Component {
   render() {
@@ -16,7 +16,7 @@ class App extends Component {
         <section className="hero is-info">
           <div className="hero-body">
             <div className="container">
-              <AddComment />
+              <AddQuote />
             </div>
           </div>
         </section>

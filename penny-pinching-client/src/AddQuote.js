@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 
-export const AddComment = saveCallback => {
+export const AddQuote = saveCallback => {
   const [name, setName] = useState('');
   const [quote, setQuote] = useState('');
   const [error, setError] = useState('');
@@ -18,7 +18,7 @@ export const AddComment = saveCallback => {
       return;
     }
 
-    fetch('/api/comment', {
+    fetch('/api/quote', {
       body: JSON.stringify({ whoSaidIt: name, whatDidTheySay: quote }),
       method: 'POST',
       headers: {
@@ -65,7 +65,7 @@ export const AddComment = saveCallback => {
       <div className="field">
         <div className="control">
           <button className="button" onClick={save}>
-            Save Comment
+            Save Quote
           </button>
         </div>
       </div>

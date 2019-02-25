@@ -5,7 +5,7 @@ class PageContent extends Component {
   constructor() {
     super();
     this.state = {
-      comments: [
+      quotes: [
         {
           id: '1',
           whoSaidIt: 'Dave van Herten',
@@ -22,21 +22,21 @@ class PageContent extends Component {
   }
 
   componentDidMount = () => {
-    // fetch('/api/comment/', { method: 'GET' })
+    // fetch('/api/quote/', { method: 'GET' })
     //   .then(response => response.json())
-    //   .then(comments => this.setState({ comments: comments }))
+    //   .then(quotes => this.setState({ quotes: quotes }))
     //   .catch(error => this.setState({ error: error }));
   };
 
   render() {
-    const { comments } = this.state;
+    const { quotes } = this.state;
     return (
       <Fragment>
-        {comments.map(comment => (
+        {quotes.map(quote => (
           <SimpleCard
-            key={comment.id}
-            name={comment.whoSaidIt}
-            quote={comment.whatDidTheySay}
+            key={quote.id}
+            name={quote.whoSaidIt}
+            quote={quote.whatDidTheySay}
           />
         ))}
       </Fragment>
